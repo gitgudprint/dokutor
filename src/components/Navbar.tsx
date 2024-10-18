@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
+import { RegisterLink, LoginLink } from "@kinde-oss/kinde-auth-nextjs";
 
 export function NavbarDemo() {
   return (
@@ -22,8 +23,10 @@ function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Services">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev"></HoveredLink>
-            
+          
+            <LoginLink>Sign in</LoginLink>
+            <RegisterLink> Regs</RegisterLink>
+           
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Products">
