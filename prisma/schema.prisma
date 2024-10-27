@@ -12,3 +12,13 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id       String   @id @unique
+  email    String   @unique
+
+  xenditCustomerID String? @unique @map(name: "xendit_customer_id")
+  xenditSubscriptionID String? @unique @map(name: "xendit_subscription_id")
+  xenditPriceID String?  @unique @map(name: "xendit_price_id")
+  xenditcurrentCurrentPeriodEnd DateTime? @map(name : "xendit_current_period_end")
+}
