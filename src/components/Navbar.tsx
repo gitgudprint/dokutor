@@ -24,8 +24,8 @@ function Navbar({ className }: { className?: string }) {
         <MenuItem setActive={setActive} active={active} item="Services">
           <div className="flex flex-col space-y-4 text-sm">
           
-            <LoginLink>Sign in</LoginLink>
-            <RegisterLink> Regs</RegisterLink>
+            <LoginLink>Log in</LoginLink>
+            <RegisterLink> Sign in</RegisterLink>
            
           </div>
         </MenuItem>
