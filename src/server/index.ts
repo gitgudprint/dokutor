@@ -8,7 +8,7 @@ export const appRouter = router({
     const {getUser} = getKindeServerSession()
     const user = await getUser()
 
-    if(!user.id || !user.email)
+    if(!user.id || !user.email) 
       throw new TRPCError({code : 'UNAUTHORIZED'})
 
     const dbUser = await db.user.findFirst({
@@ -16,6 +16,7 @@ export const appRouter = router({
       id : user.id
       }
     })
+
     if(!dbUser)  {
       await db.user.create({
         data:  {
@@ -23,7 +24,6 @@ export const appRouter = router({
           email : user.email
         
         }
-
       })
     }
 
