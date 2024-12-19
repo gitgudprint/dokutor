@@ -1,3 +1,4 @@
+import Dashboard from "@/components/ui/Dashboard"
 import { db } from "@/db"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { redirect } from "next/navigation"
